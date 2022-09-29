@@ -18,7 +18,7 @@
 }
 
 .data{
-  width: 70%;
+  width: 76%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3,1fr);
