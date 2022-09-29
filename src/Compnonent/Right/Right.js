@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Right.css';
 import img from '../../img/j.jpg'
-const Right = ({cart}) => {
+const Right = ({cart,handleBreak}) => {
 
-   const [breaks,setBreaks] = useState([])
+   
 
    let totalTime = 0;
 
    for(const single of cart){
       totalTime = totalTime + single.time;
    }
+   
 
-   const handleBreak = (e) => {
-      const newBreaks=  breaks* (e.target.innerText);
-      setBreaks(newBreaks)
-      console.log(newBreaks)
-    }
 
   return (
   
@@ -50,7 +46,7 @@ const Right = ({cart}) => {
           </div>
           <div className='br-time'>
           <h4>Break time</h4>
-            <p>15 seconds</p>
+            <p>{}</p>
           </div>
           </div>
           <div className='btn-activity'>

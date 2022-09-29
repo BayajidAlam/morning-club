@@ -10,7 +10,7 @@ import Question from '../../Question/Question';
 const Nav = () => {
 const [Compnonents,setComponent] = useState([])
 const [cart,setCart] = useState([])
-
+const [breaks,setBreaks] = useState([])
 
 useEffect(()=>{
   fetch('generated.json')
@@ -18,7 +18,13 @@ useEffect(()=>{
   .then(data=>setComponent(data))
 },)
 
-
+const handleBreak = (e) => {
+      
+  const selected = e.target.innerText
+  const newBreaks=  [...breaks,selected]
+  const lastItem = newBreaks[newBreaks.length -1]
+  setBreaks(lastItem)
+}
 
 const handleAddToList = (item) => {
   const newCart= [...cart,item];
@@ -44,6 +50,8 @@ const handleAddToList = (item) => {
      </div>
       <Right 
       cart={cart}
+    handleBreak={handleBreak}
+    setBreaks={setBreaks}
       ></Right>
     </div>
     <Question></Question>
