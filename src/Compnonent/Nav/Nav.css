@@ -1,0 +1,52 @@
+.icon{
+  font-size: 50px;
+  color: blue;
+  margin-right: 5px;
+}
+.nav{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 80px;
+  font-size: 30px;
+  color: blue;
+  margin-bottom: 0px;
+}
+
+.display{
+  display: flex;
+}
+
+.data{
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 20px;
+  margin-top: 15px;
+  padding: 30px;
+}
+
+@media screen and (max-width:576px) {
+  .data{
+    display:flex;
+    flex-direction: column;
+  }
+  .display{
+    display: block;
+  }
+
+  .icon{
+    font-size: 35px;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: blue;
+  }
+  .name{
+    font-size: 25px;
+  }
+}

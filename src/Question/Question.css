@@ -1,0 +1,16 @@
+.question-container{
+  width: 90%;
+  margin: auto;
+  
+}
+
+.question{
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.qtn{
+  margin: 0;
+}
