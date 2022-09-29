@@ -46,7 +46,7 @@ const Right = ({cart,handleBreak}) => {
           </div>
           <div className='br-time'>
           <h4>Break time</h4>
-            <p>{}</p>
+            <p></p>
           </div>
           </div>
           <div className='btn-activity'>

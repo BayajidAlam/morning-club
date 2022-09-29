@@ -17,13 +17,13 @@ useEffect(()=>{
   .then(res=>res.json())
   .then(data=>setComponent(data))
 },)
-
+console.log(breaks)
 const handleBreak = (e) => {
       
   const selected = e.target.innerText
   const newBreaks=  [...breaks,selected]
-  const lastItem = newBreaks[newBreaks.length -1]
-  setBreaks(lastItem)
+  
+  setBreaks(newBreaks)
 }
 
 const handleAddToList = (item) => {
