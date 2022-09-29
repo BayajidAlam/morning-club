@@ -2,7 +2,7 @@ import React from 'react';
 import './Left.css'
 const Left = ({item,handleAddToList}) => {
  
-  const {name, picture,time} = item;
+const {name, picture,time} = item;
   
   return (
     <div className='card'>

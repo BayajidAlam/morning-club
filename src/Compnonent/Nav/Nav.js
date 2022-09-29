@@ -10,11 +10,15 @@ import Question from '../../Question/Question';
 const Nav = () => {
 const [Compnonents,setComponent] = useState([])
 const [cart,setCart] = useState([])
+
+
 useEffect(()=>{
   fetch('generated.json')
   .then(res=>res.json())
   .then(data=>setComponent(data))
 },)
+
+
 
 const handleAddToList = (item) => {
   const newCart= [...cart,item];
@@ -38,7 +42,9 @@ const handleAddToList = (item) => {
          
       }
      </div>
-      <Right cart={cart}></Right>
+      <Right 
+      cart={cart}
+      ></Right>
     </div>
     <Question></Question>
     </div>

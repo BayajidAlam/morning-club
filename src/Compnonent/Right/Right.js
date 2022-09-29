@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Right.css';
 import img from '../../img/j.jpg'
 const Right = ({cart}) => {
-   
+
+   const [breaks,setBreaks] = useState([])
+
    let totalTime = 0;
+   
    for(const single of cart){
       totalTime = totalTime + single.time;
    }
 
+   const handleBreak = () => {
+      console.log();
+    }
+
   return (
+  
    <div className='right-side'>
 
       <div className='position-stickey'>
@@ -25,11 +33,11 @@ const Right = ({cart}) => {
               <h4 className='txt'>Add a Break</h4>
               <div className='options'> 
                  <div className='time-option'>
-                 <p>10s</p>
-                  <p>20s</p>
-                  <p>30s</p>
-                  <p>40s</p>
-                   <p>50s</p>
+                 <p onClick={handleBreak()}>10s</p>
+                  <p onClick={handleBreak()}>20s</p>
+                  <p onClick={handleBreak()}>30s</p>
+                  <p onClick={handleBreak()}>40s</p>
+                   <p onClick={handleBreak()}>50s</p>
                  </div>
               </div>
               <div className='runnig-details'>
