@@ -8,30 +8,37 @@ import { useEffect, useState } from 'react';
 import Question from '../../Question/Question';
 
 const Nav = () => {
-const [Compnonent,setComponent] = useState([])
+const [Compnonents,setComponent] = useState([])
+const [cart,setCart] = useState([])
 useEffect(()=>{
   fetch('generated.json')
   .then(res=>res.json())
   .then(data=>setComponent(data))
-},[])
+},)
+
+const handleAddToList = (item) => {
+  const newCart= [...cart,item];
+  setCart(newCart)
+}
   return (
     <div>
       <div className='nav'> 
       <FontAwesomeIcon className='icon' icon={faPersonRunning}></FontAwesomeIcon>
-      <h1 className='name'>Morning Running Club</h1>
+      <h1 className='name'>Morning Running Club: {cart.length}</h1>
     </div>
     <div className='display'>
      <div className='data'>
      {
-        Compnonent.map(item=>
+        Compnonents.map(item=>
           <Left
           key={item._id}
           item={item}
+          handleAddToList={handleAddToList}
           ></Left>)
          
       }
      </div>
-      <Right></Right>
+      <Right cart={cart}></Right>
     </div>
     <Question></Question>
     </div>

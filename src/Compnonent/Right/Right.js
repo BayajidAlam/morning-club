@@ -1,7 +1,13 @@
 import React from 'react';
 import './Right.css';
 import img from '../../img/j.jpg'
-const Right = () => {
+const Right = ({cart}) => {
+   
+   let totalTime = 0;
+   for(const single of cart){
+      totalTime = totalTime + single.time;
+   }
+
   return (
    <div className='right-side'>
 
@@ -30,7 +36,7 @@ const Right = () => {
           <h4 className='detail'>Runnig Details</h4>
           <div className='ex-time'>
             <h4>Runnig time</h4>
-            <p>200 seconds</p>
+            <p>{totalTime}seconds</p>
           </div>
           <div className='br-time'>
           <h4>Break time</h4>

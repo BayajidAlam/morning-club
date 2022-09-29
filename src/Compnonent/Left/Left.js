@@ -1,6 +1,6 @@
 import React from 'react';
 import './Left.css'
-const Left = ({item}) => {
+const Left = ({item,handleAddToList}) => {
  
   const {name, picture,time} = item;
   
@@ -10,7 +10,7 @@ const Left = ({item}) => {
       <h4>{name}</h4>
       <h5>{time}</h5>
       <div className='btn-container'>
-      <button className='btn'>Add to list</button>
+      <button onClick={()=>handleAddToList(item)} className='btn'>Add to list</button>
       </div>
     </div>
   );
