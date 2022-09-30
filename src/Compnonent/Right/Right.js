@@ -1,7 +1,8 @@
 import React from 'react';
 import './Right.css';
 import img from '../../img/j.jpg'
-const Right = ({cart,handleBreak,breaks,handleInitial,handleBtnOne,handleBtnTwo,handleBtnThree,handleBtnFour}) => {
+
+const Right = ({cart,breaks,handleInitial,handleBtnOne,handleBtnTwo,handleBtnThree,handleBtnFour}) => {
 
    
 
@@ -51,6 +52,7 @@ const Right = ({cart,handleBreak,breaks,handleInitial,handleBtnOne,handleBtnTwo,
           </div>
           <div className='btn-activity'>
             <button>Activity Completed</button>
+                     
           </div>
            </div>
        </div>

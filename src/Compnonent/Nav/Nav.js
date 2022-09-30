@@ -17,6 +17,7 @@ useEffect(()=>{
   .then(res=>res.json())
   .then(data=>setComponent(data))
 },)
+
 console.log(breaks)
 const handleBreak = (e) => {
       
@@ -30,7 +31,6 @@ const handleAddToList = (item) => {
   const newCart= [...cart,item];
   setCart(newCart)
 }
-
 const handleInitial=()=>{
   setBreaks(10);
 }
@@ -47,6 +47,8 @@ const handleBtnFour=()=>{
   setBreaks(50)
 }
 
+
+console.log(setBreaks)
   return (
     <div>
       <div className='nav'> 
