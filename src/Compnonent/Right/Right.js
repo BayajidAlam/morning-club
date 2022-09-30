@@ -1,7 +1,7 @@
 import React from 'react';
 import './Right.css';
 import img from '../../img/j.jpg'
-const Right = ({cart,handleBreak}) => {
+const Right = ({cart,handleBreak,breaks,handleInitial,handleBtnOne,handleBtnTwo,handleBtnThree,handleBtnFour}) => {
 
    
 
@@ -31,11 +31,11 @@ const Right = ({cart,handleBreak}) => {
               <h4 className='txt'>Add a Break</h4>
               <div className='options'> 
                  <div className='time-option'>
-                 <p onClick={handleBreak}>10s</p>
-                  <p onClick={handleBreak}>20s</p>
-                  <p onClick={handleBreak}>30s</p>
-                  <p onClick={handleBreak}>40s</p>
-                   <p onClick={handleBreak}>50s</p>
+                 <p onClick={()=>handleInitial()}>10s</p>
+                  <p onClick={()=>handleBtnOne()}>20s</p>
+                  <p onClick={()=>handleBtnTwo()}>30s</p>
+                  <p onClick={()=>handleBtnThree()}>40s</p>
+                   <p onClick={()=>handleBtnFour()}>50s</p>
                  </div>
               </div>
               <div className='runnig-details'>
@@ -45,7 +45,7 @@ const Right = ({cart,handleBreak}) => {
             <p>{totalTime}seconds</p>
           </div>
           <div className='br-time'>
-          <h4>Break time</h4>
+          <h4>Break time <span>{breaks}</span></h4>
             <p></p>
           </div>
           </div>

@@ -10,7 +10,7 @@ import Question from '../../Question/Question';
 const Nav = () => {
 const [Compnonents,setComponent] = useState([])
 const [cart,setCart] = useState([])
-const [breaks,setBreaks] = useState([])
+const [breaks,setBreaks] = useState(10)
 
 useEffect(()=>{
   fetch('generated.json')
@@ -30,11 +30,28 @@ const handleAddToList = (item) => {
   const newCart= [...cart,item];
   setCart(newCart)
 }
+
+const handleInitial=()=>{
+  setBreaks(10);
+}
+const handleBtnOne=()=>{
+  setBreaks(20)
+}
+const handleBtnTwo=()=>{
+  setBreaks(30)
+}
+const handleBtnThree=()=>{
+  setBreaks(40)
+}
+const handleBtnFour=()=>{
+  setBreaks(50)
+}
+
   return (
     <div>
       <div className='nav'> 
       <FontAwesomeIcon className='icon' icon={faPersonRunning}></FontAwesomeIcon>
-      <h1 className='name'>Morning Running Club: {cart.length}</h1>
+      <h1 className='name'>Morning Running Club</h1>
     </div>
     <div className='display'>
      <div className='data'>
@@ -52,6 +69,12 @@ const handleAddToList = (item) => {
       cart={cart}
     handleBreak={handleBreak}
     setBreaks={setBreaks}
+    breaks={breaks}
+    handleInitial={handleInitial}
+    handleBtnOne={handleBtnOne}
+    handleBtnTwo={handleBtnTwo}
+    handleBtnThree={handleBtnThree}
+    handleBtnFour={handleBtnFour}
       ></Right>
     </div>
     <Question></Question>
