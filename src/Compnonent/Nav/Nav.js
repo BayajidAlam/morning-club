@@ -58,8 +58,6 @@ const handleBtnFour=()=>{
   localStorage.setItem('breaks',50)
 }
 
-
-console.log(setBreaks)
   return (
     <div>
       <div className='nav'> 
