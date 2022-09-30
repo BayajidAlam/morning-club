@@ -1,22 +1,23 @@
 import React from 'react';
 import './Right.css';
 import img from '../../img/j.jpg'
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const Right = ({cart,breaks,handleInitial,handleBtnOne,handleBtnTwo,handleBtnThree,handleBtnFour}) => {
 
-   
+   const notify = () =>toast('Wow,you are done!')
 
    let totalTime = 0;
-
    for(const single of cart){
       totalTime = totalTime + single.time;
    }
-   
-
-
   return (
-  
    <div className='right-side'>
+
+   <ToastContainer/>
 
       <div className='position-stickey'>
 
@@ -51,12 +52,14 @@ const Right = ({cart,breaks,handleInitial,handleBtnOne,handleBtnTwo,handleBtnThr
           </div>
           </div>
           <div className='btn-activity'>
-            <button>Activity Completed</button>
+            <button onClick={notify}>Activity Completed</button>
                      
           </div>
+          
            </div>
        </div>
      
    )
+   
 }
 export default Right;
